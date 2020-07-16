@@ -1,0 +1,16 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select  savings.account_no account_no,
+cust.cust_id as cust_id,
+cust.cust_fname as cust_fname,
+cust.cust_lname as cust_lname,
+cont.cust_phone as cust_phone
+from bank_sb_account savings,
+bank_customer cust,
+bank_cust_contact cont
+where ( cust.cust_id = savings.primary_cust_id or
+cust.cust_id = savings.secondary_cust_id ) and
+savings.primary_cust_id is not null and
+savings.secondary_cust_id is not null and
+cust.cust_id = cont.cust_id and
+cont.contact_type like '%HOME%';

@@ -1,0 +1,15 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select saving.account_no,
+saving.cust_id,
+round((saving.initial_amt/100000),2) as initialamtin_lakhs,
+case
+    when saving.initial_amt < 50000 then 'Low'
+    when saving.initial_amt > 5000000 then 'High'
+    else 'Medium'
+end as Amount_category,
+saving.start_dt,
+add_months(saving.start_dt,saving.fd_term_mnth) as maturity_date
+from bank_fd_account saving
+where to_char(saving.start_dt,'yyyy') > 2004 and
+saving.acc_status = 'Active'; 

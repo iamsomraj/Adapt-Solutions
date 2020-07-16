@@ -1,0 +1,14 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select savings.account_no as account_no,
+trans.trans_type as trans_type,
+trans.trans_dt as trans_dt,
+trans.trans_desc as trans_desc,
+trans.trans_amt as trans_amt
+from bank_sb_account savings,
+bank_transaction trans
+where savings.account_no = trans.trans_acc_no and
+trans.trans_amt > 1000
+order by savings.account_no,
+trans.trans_type,
+trans.trans_dt;

@@ -1,0 +1,10 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select fd.account_no as account_no,
+cust.cust_fname,
+cust.cust_lname
+from bank_fd_account fd,
+bank_customer cust
+where cust.cust_id = fd.cust_id and
+( fd.initial_amt = ( select max(initial_amt) from bank_fd_account ) or
+fd.initial_amt = ( select min(initial_amt) from bank_fd_account ) );

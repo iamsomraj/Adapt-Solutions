@@ -1,0 +1,8 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select cust_id,
+count(cust_id)
+from bank_cust_contact contact
+where contact.contact_type = 'OFFICE'
+group by contact.cust_id
+having count(contact.cust_phone) > 1;

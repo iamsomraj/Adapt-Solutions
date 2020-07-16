@@ -1,0 +1,8 @@
+alter session set current_schema = mt_toy;
+SET heading OFF
+/*
+ * Enter your query below.
+ * Please append a semicolon ";" at the end of the query
+ */
+ select * from toy
+ where min_age <= 3;

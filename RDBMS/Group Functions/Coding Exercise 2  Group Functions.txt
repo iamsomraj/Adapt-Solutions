@@ -1,0 +1,8 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select designation,
+count(bank_emp_id) as Emp_count
+from bank_employee
+where designation not like '%ATTENDER%'
+group by designation
+order by count(bank_emp_id), designation;

@@ -1,0 +1,5 @@
+alter session set current_schema = mt_toy;
+SET heading OFF
+select *
+from TOY
+where quantity between 20 and 50;

@@ -1,0 +1,9 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select emp.bank_emp_id as bank_emp_id,
+emp.emp_name as emp_name,
+emp.designation as designation,
+trans.trans_desc as trans_desc
+from bank_employee emp left outer join bank_transaction trans
+on emp.bank_emp_id = trans.bank_emp_id 
+where emp.designation like '%MANAGER%' or emp.designation like '%ASST.%MGR.%';

@@ -1,0 +1,6 @@
+alter session set current_schema = mt_toy;
+SET heading OFF
+SELECT TOY_NAME
+FROM TOY
+WHERE TOY_ID NOT IN ( SELECT DISTINCT TOY_ID
+FROM TOY_RENTAL);

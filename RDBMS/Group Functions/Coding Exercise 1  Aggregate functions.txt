@@ -1,0 +1,6 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select min(installment_amt),
+max(installment_amt)
+from bank_rd_account
+where to_char(rd_start_dt,'yyyy') = '2008';

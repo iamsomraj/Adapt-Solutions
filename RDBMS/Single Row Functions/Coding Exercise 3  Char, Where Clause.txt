@@ -1,0 +1,15 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select trans.trans_dt,
+trans.trans_acc_no,
+trans.trans_desc,
+trans.trans_amt,
+decode(trans_type,'CR','Credit',
+'DB','Debit') trans_type
+from bank_transaction trans
+where trans_amt > 10000 and
+trans_desc not like '%RD%INSTLMNT%'
+order by
+trans.trans_type asc,
+trans.trans_dt desc;
+

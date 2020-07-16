@@ -1,0 +1,8 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select cust.cust_id,
+upper(cust.cust_fname),
+upper(cust.cust_lname),
+to_char(cust.cust_dob,'dd-Mon')
+from bank_customer cust
+where cust.cust_sex like '%F%';

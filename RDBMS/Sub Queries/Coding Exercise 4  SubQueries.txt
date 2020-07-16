@@ -1,0 +1,11 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select cust_id,
+cust_fname
+from bank_customer
+where cust_id not in (
+    select cust_id
+    from bank_cust_contact
+    where contact_type = 'OFFICE'
+) and
+cust_type = 'IND';

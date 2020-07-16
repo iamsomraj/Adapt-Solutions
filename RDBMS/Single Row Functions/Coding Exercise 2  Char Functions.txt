@@ -1,0 +1,8 @@
+alter session set current_schema=bank;
+select 
+to_char(bank.trans_dt,'dd-Mon-yyyy') || ' 00:00:00' as trans_dt,
+lower(substr(bank.trans_desc,1,20)) as trans_desc,
+bank.trans_amt as trans_amt
+from bank_transaction bank
+where bank.trans_type = 'CR' and
+to_char(bank.trans_dt,'mm-yy') = '06-10';

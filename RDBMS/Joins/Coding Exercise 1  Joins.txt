@@ -1,0 +1,12 @@
+alter session set current_schema=bank;
+SET heading OFF;
+select cust.cust_id as cust_id,
+cust.cust_fname as cust_fname,
+cust.cust_lname as cust_lname,
+cont.cust_phone as cust_phone,
+cont.cust_city as cust_city
+from bank_customer cust,
+bank_cust_contact cont
+where cust.cust_id = cont.cust_id and
+cont.cust_state not like '%Karnataka%' and
+cont.contact_type like '%HOME%';
