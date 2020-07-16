@@ -19,6 +19,10 @@ LinkedIn : [iamsomraj](https://www.linkedin.com/in/iamsomraj/) 😊
 
 HackerRank: [iamsomraj](https://www.hackerrank.com/iamsomraj?hr_r=1) 😊
 
+Portfolio: [Somraj Mukherjee](https://iamsomraj.github.io/) 😊
+
+Google Play Store: [Somraj Mukherjee](https://play.google.com/store/apps/developer?id=Somraj+Mukherjee) 😊
+
 ## Show Your Support
 
 Give me a star ⭐
