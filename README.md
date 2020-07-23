@@ -1,17 +1,18 @@
 # Adapt Solutions
 
-This is a repository, containing the solutions of Adapt. If you feel that something is not working, feel free to create pull request. You are more than welcome to make any new changes. I have this repo for only educational purpose of mine.
+This is a repository, containing the solutions of Adapt. If you feel that something is not working, feel free to create pull request. You are more than welcome to make any new changes. I have made this repo for only educational purpose of mine.
 
 ## Objectives
 
 1. Learning SQL
-2. Using the usage of subqueries
+2. Using subqueries
 3. Implementing Inner Joins and Outer Joins
 
 ## Contents
 
 1. RDBMS
 2. Case Study 1
+3. HTML CSS JavaScript
 
 ## Developer
 
