@@ -1,8 +1,9 @@
 alter session set current_schema=bank;
-select 
-to_char(bank.trans_dt,'dd-Mon-yyyy') || ' 00:00:00' as trans_dt,
-lower(substr(bank.trans_desc,1,20)) as trans_desc,
-bank.trans_amt as trans_amt
-from bank_transaction bank
-where bank.trans_type = 'CR' and
-to_char(bank.trans_dt,'mm-yy') = '06-10';
+
+
+SELECT TRANS_DT,
+SUBSTR(TRANS_DESC,1,20) AS TRANS_DESC,
+TRANS_AMT
+FROM BANK_TRANSACTION
+WHERE UPPER(TRANS_TYPE) LIKE '%CR%' AND 
+TO_CHAR(TRANS_DT,'MM-YY') = '06-10';
