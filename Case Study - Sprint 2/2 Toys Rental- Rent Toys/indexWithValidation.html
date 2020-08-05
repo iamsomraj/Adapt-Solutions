@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rent Toys</title>
+
+		<script src="./App.js" defer></script>
+	</head>
+	<body>
+		<h2>
+			<span style="background-color: #000080; color: #ff6600;">Rent Toys</span>
+		</h2>
+		<table>
+			<tr>
+				<td>Toy Name</td>
+				<td>
+					<select>
+						<option>Bicycle</option>
+						<option>Train</option>
+						<option>Doll</option>
+						<option>Teddy Bear</option>
+						<option>Kite</option>
+						<option>Airplane</option>
+						<option>Model Car</option>
+						<option>Art Farm</option>
+						<option>Lego Mind storms</option>
+						<option>Speak and Spell</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Customer Name</td>
+				<td><input type="text" id="customer-name" /></td>
+				<td id="customer-name-feedback"></td>
+			</tr>
+			<tr>
+				<td>Rent Start Date</td>
+				<td>
+					<input type="text" id="rent-start-date" placeholder="yyyy-mm-dd" />
+				</td>
+				<td id="rent-start-date-feedback"></td>
+			</tr>
+			<tr>
+				<td>Rent Tenure</td>
+				<td><input type="text" id="tenure" /></td>
+				<td id="tenure-feedback"></td>
+			</tr>
+			<tr>
+				<td id="label">Number of Toys Available</td>
+				<td>
+					<input type="text" />
+				</td>
+			</tr>
+			<tr>
+				<td>Enter number of toys</td>
+				<td><input type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Submit Query" /></td>
+			</tr>
+		</table>
+	</body>
+</html>
