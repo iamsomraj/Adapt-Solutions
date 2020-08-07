@@ -13,6 +13,9 @@ const checkLeapYearHandler = () => {
 			leapYearEl.textContent = `${input} is not a leap year`;
 		}
 		document.querySelector('body').appendChild(leapYearEl);
+
+		// after two seconds, the input will be cleared and the message also
+		
 		setTimeout(() => {
 			inputEl.value = '';
 			document.querySelector('body').removeChild(leapYearEl);
