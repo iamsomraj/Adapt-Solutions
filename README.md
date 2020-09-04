@@ -2,6 +2,9 @@
 
 This is a repository, containing the solutions of Adapt. I have made this repo for only educational purpose of mine.
 
+[![HitCount](http://hits.dwyl.com/iamsomraj/Adapt-Solutions.svg)](http://hits.dwyl.com/iamsomraj/Adapt-Solutions)
+
+
 ## Objectives
 
 1. Learning SQL
