@@ -13,4 +13,5 @@ cust.cust_id = savings.secondary_cust_id ) and
 savings.primary_cust_id is not null and
 savings.secondary_cust_id is not null and
 cust.cust_id = cont.cust_id and
-cont.contact_type like '%HOME%';
+cont.contact_type like '%HOME%'
+order by savings.account_no;
